@@ -27,4 +27,8 @@ public class DebtService {
     public void deletar(Long id) {
         debtRepository.deleteById(id);
     }
+
+    public List<Debt> listarTodasAsDividas() {
+        return debtRepository.findAll();
+    }
 }

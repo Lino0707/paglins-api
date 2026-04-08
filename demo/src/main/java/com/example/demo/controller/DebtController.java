@@ -19,6 +19,11 @@ public class DebtController {
         return debtService.listarDividasPorUsuario(userId);
     }
 
+    @GetMapping
+    public List<Debt> getAll() {
+        return debtService.listarTodasAsDividas();
+    }
+
     @PostMapping
     public Debt create(@RequestBody Debt debt) {
         return debtService.salvar(debt);
