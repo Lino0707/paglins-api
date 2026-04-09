@@ -12,8 +12,8 @@ O **Paglins** nasceu de uma necessidade real: controlar os ganhos semanais de en
 
 | Dia | Ação |
 |-----|------|
-| **Seg - Sáb** | Usuário registra rotas com status `OPEN` |
-| **Todo Domingo** | Rotas fecham automaticamente → `CLOSED` e somam no `nextBalance` |
+| **Seg - Sáb** | Usuário registra rotas com status `OPEN` e somam no `nextBalance` |
+| **Todo Domingo** | Rotas fecham automaticamente → `CLOSED` |
 | **Toda Quinta** | Valores são liberados → `PAID` e entram no `balance` do usuário |
 
 > A transição de status é feita automaticamente por um **scheduler** no backend, sem necessidade de intervenção manual.
