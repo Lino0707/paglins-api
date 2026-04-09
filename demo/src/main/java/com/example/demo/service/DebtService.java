@@ -2,8 +2,11 @@ package com.example.demo.service;
 
 import com.example.demo.model.Debt;
 import com.example.demo.repository.DebtRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -13,7 +16,16 @@ public class DebtService {
     private DebtRepository debtRepository;
 
     public List<Debt> listarDividasPorUsuario(Long userId) {
-        return debtRepository.findByUserId(userId);
+        List<Debt> debts = debtRepository.findByUserId(userId);
+        LocalDate hoje = LocalDate.now();
+
+        for (Debt debt : debts) {
+            if (debt.getDueDate().isBefore(hoje) && !"PAID".equals(debt.getStatus())) {
+                debt.setStatus("OVERDUE");
+                debtRepository.save(debt);
+            }
+        }
+        return debts;
     }
 
     public void pagar(Long id) {

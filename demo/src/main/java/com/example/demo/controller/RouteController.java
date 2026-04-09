@@ -10,6 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/paglins/routes")
+@CrossOrigin(origins = "*")
 public class RouteController {
 
     @Autowired

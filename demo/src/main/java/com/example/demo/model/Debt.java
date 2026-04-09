@@ -16,7 +16,7 @@ public class Debt {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "DEBT_ID")
-    @JsonProperty("id") // O front espera "id"
+    @JsonProperty("id")
     private Long debtId;
 
     @Column(name = "USER_ID")
@@ -29,7 +29,7 @@ public class Debt {
     private BigDecimal amount;
 
     @Column(name = "DUE_DATE")
-    @JsonFormat(pattern = "dd/MM/yyyy") // Formata a data para o front
+    @JsonFormat(pattern = "dd/MM/yyyy")
     private LocalDate dueDate;
 
     @Column(name = "STATUS")

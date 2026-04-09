@@ -25,11 +25,6 @@ public class DebtController {
         return debtService.listarTodasAsDividas();
     }
 
-    @PostMapping
-    public Debt create(@RequestBody Debt debt) {
-        return debtService.salvar(debt);
-    }
-
     @PatchMapping("/{id}/pay")
     public void pay(@PathVariable Long id) {
         debtService.pagar(id);
@@ -39,6 +34,4 @@ public class DebtController {
     public void delete(@PathVariable Long id) {
         debtService.deletar(id);
     }
-
 }
-
