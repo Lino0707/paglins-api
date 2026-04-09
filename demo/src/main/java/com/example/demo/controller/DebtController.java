@@ -9,6 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/paglins/debts")
+@CrossOrigin(origins = "*")
 public class DebtController {
 
     @Autowired
