@@ -178,16 +178,6 @@ http://localhost:3000/swagger-ui/index.html
 
 ---
 
-## 🧪 Testes
-
-```bash
-./mvnw test
-```
-
-O projeto conta com **9 testes unitários** cobrindo os services de `Debt` e `Route` com JUnit 5 e Mockito, sem necessidade de conexão com banco de dados.
-
----
-
 ## 👨‍💻 Autor
 
 Desenvolvido por **Felipe Lino**
