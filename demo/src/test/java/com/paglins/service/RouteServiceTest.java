@@ -1,7 +1,7 @@
-package com.example.demo.service;
+package com.paglins.service;
 
-import com.example.demo.model.Route;
-import com.example.demo.repository.RouteRepository;
+import com.paglins.model.Route;
+import com.paglins.repository.RouteRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

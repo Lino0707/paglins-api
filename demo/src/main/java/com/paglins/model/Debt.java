@@ -1,4 +1,4 @@
-package com.example.demo.model;
+package com.paglins.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -38,4 +38,13 @@ public class Debt {
     @Column(name = "PAYMENT_DATE")
     @JsonFormat(pattern = "dd/MM/yyyy")
     private LocalDate paymentDate;
+
+    @Column(name = "TYPE")
+    private String type;
+
+    @Column(name = "INSTALLMENT_NUMBER")
+    private Integer installmentNumber;
+
+    @Column(name = "TOTAL_INSTALLMENTS")
+    private Integer totalInstallments;
 }

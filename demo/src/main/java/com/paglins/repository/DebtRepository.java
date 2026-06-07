@@ -1,6 +1,6 @@
-package com.example.demo.repository;
+package com.paglins.repository;
 
-import com.example.demo.model.Debt;
+import com.paglins.model.Debt;
 import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.query.Procedure;

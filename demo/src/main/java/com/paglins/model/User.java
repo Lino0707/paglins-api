@@ -1,8 +1,10 @@
-package com.example.demo.model;
+package com.paglins.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.Data;
+
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Entity
@@ -19,12 +21,15 @@ public class User {
     private String name;
 
     @Column(name = "BALANCE")
-    private Double balance;
-
-    @Column(name = "NEXT_BALANCE")
-    private Double nextBalance;
+    private BigDecimal balance;
 
     @Column(name = "CREATE_AT")
     private LocalDateTime createAt;
+
+    @Column(name = "LAST_NAME")
+    private String lastName;
+
+    @Column(name = "EMAIL")
+    private String email;
 
 }

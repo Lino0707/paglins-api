@@ -1,6 +1,6 @@
-package com.example.demo.repository;
+package com.paglins.repository;
 
-import com.example.demo.model.User;
+import com.paglins.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserRepository extends JpaRepository <User, Long> {

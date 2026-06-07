@@ -1,7 +1,7 @@
-package com.example.demo.service;
+package com.paglins.service;
 
-import com.example.demo.model.Debt;
-import com.example.demo.repository.DebtRepository;
+import com.paglins.model.Debt;
+import com.paglins.repository.DebtRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
